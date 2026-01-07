@@ -1,0 +1,63 @@
+<center>
+  <h1 id="lovecalc">Love Calculator</h1>
+  <input id="box1" type="text" placeholder="Enter your Name" />
+  <br />
+  <input id="box2" type="text" placeholder="Enter your Partner's Name" />
+  <br />
+  <button id="btn" onclick="calc()">Calculate</button>
+  <h3 id="res">Love Percentage :</h3>
+</center>
+
+<style>
+  #lovecalc {
+    color: palevioletred;
+  }
+  #res {
+    color: white;
+  }
+  #box1 {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+  }
+  #box2 {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+  }
+  #btn {
+    margin: 5px;
+    background-color: palevioletred;
+    border-style: dotted;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+  }
+  center {
+    background-color: rgb(54, 59, 63);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+  }
+  #res {
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+  #btn:hover {
+    background-color: hotpink;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+</style>
+
+<script>
+  var btn = document.getElementById("btn");
+  var res = document.getElementById("res");
+
+  function calc() {
+    var percentage = Math.floor(Math.random() * 100) + 1;
+    res.textContent = "Love Percentage : " + percentage + "%";
+  }
+</script>
